@@ -12,6 +12,7 @@
     - [Install](#install)
     - [Usage](#usage)
 - [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
@@ -52,8 +53,6 @@
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
-
 - **Show posts**
 - **Comment on posts**
 - **Like posts**
@@ -80,7 +79,7 @@ In order to run this project you need:
 Clone this repository to your desired folder:
 
 ```sh
-  git clone git@github.com:myaccount/my-project.git
+  git clone https://github.com/belalgamal46/blog-app.git
 ```
 
 ### Install
@@ -111,12 +110,16 @@ To run the project, execute the following command:
 
 ## 👥 Authors <a name="authors"></a>
 
-> Mention all of the collaborators of this project.
-
 👤 **Belal Gamal**
 
 - GitHub: [Github Profile](https://github.com/belalgamal46)
 - LinkedIn: [LinkedIn Profile](https://www.linkedin.com/in/belalgamal/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🔭 Future Features <a name="future-features"></a>
+
+- [ ] **Create a post**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -151,7 +154,7 @@ I would like to thank Microverse
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./LICENSE) licensed.
+This project is [MIT](./LICENSE.md) licensed.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

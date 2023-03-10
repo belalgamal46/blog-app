@@ -1,0 +1,15 @@
+version: '3.7'
+
+services:
+  db:
+    container_name: postgres
+    image: postgres:14-alpine3.15
+    ports:
+      - 5433:5432
+    environment:
+      - POSTGRES_HOST_AUTH_METHOD=trust
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    restart: always
+volumes:
+  db-data:
