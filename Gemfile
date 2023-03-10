@@ -6,6 +6,8 @@ ruby '3.0.5'
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.0.4', '>= 7.0.4.2'
 
+gem 'rails-controller-testing'
+
 # Rubocop to check for linters
 gem 'rubocop', '~> 1.47'
 
