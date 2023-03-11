@@ -1,1 +1,33 @@
-<h1>Show Post Details</h1>
+<section class="single-post">
+  <h1>Show Post Details</h1>
+  <div class="single-post-text">
+    <h2>
+      <%= @post.title %>
+      <span>
+        by <%= @post.author.name %>
+      </span>
+    </h2>
+    <p>
+      <%= @post.text %>
+    </p>
+  </div>
+
+  <div class="single-post-comments">
+    <% if @comments.length == 0 %>
+      <p>There is no comments yet on this post</p>
+    <% else %>
+      <ul class="comments-list">
+        <% @comments.each do |comment| %>
+          <li class="comment-item">
+            <h1>
+              <%= comment.author.name %>:
+            </h1>
+            <p>
+              <%= comment.text %>
+            </p>
+          </li>
+        <% end %>
+      </ul>
+    <% end %>
+  </div>
+</section>

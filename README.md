@@ -31,7 +31,7 @@
 <details>
   <summary>Client</summary>
   <ul>
-    <li><a href="https://reactjs.org/">React.js</a></li>
+    <li><a href="https://rubyonrails.org/">Ruby on Rails</a></li>
   </ul>
 </details>
 
@@ -119,7 +119,8 @@ To run the project, execute the following command:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Create a post**
+- [ ] **Ability to Create a post**
+- [ ] **Mobile version of the app**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
