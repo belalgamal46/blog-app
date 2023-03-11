@@ -1,3 +1,56 @@
-<h1>User details</h1>
+<div class="user-container">
+  <h1>User details</h1>
+  <div class="user">
+    <div class="photo-container">
+      <%= image_tag @user.photo, {alt: 'avatar', class: 'user-photo'} %>
+    </div>
+    <div class="user-info">
+      <h2>
+        <%= @user.name %>
+      </h2>
+      <p>
+        Number of posts: <%= @user.posts_counter %>
+      </p>
+    </div>
+  </div>
 
-<p>Name: <%=@user.name%></p>
+  <div class="bio">
+    <h2>Bio</h2>
+    <p>
+      <%= @user.bio %>
+    </p>
+  </div>
+
+  <div class="recent-posts">
+    <div>
+      <ul class="posts-list">
+        <% if @user.posts_counter == 0 %>
+          <li class="no-posts">This user have no posts</li>
+        <%  else %>
+          <% @user.most_recent_posts.each do |post| %>
+            <li class="post-container">
+              <%= link_to user_post_path(@user.id, post.id), class:"post" do %>
+                <div class="user-recent-post">
+                  <h2 class="post-title"><%= post.title %></h2>
+                  <p class="post-body"><%= post.text %></p>
+                  <h3 class="post-counters">Comments: <%= post.comments_counter%>, Likes: <%= post.likes_counter %></h3>
+                </div>
+              <% end %>
+            </li>
+          <% end %>
+        <%  end %>
+
+      </ul>
+    </div>
+    <div class="post-btn-container">
+      <%= link_to user_posts_path(@user), class:"post-btn-link" do %>
+        <% if @user.posts_counter == 0 %>
+          <button type="button" disabled class="see-all-posts-btn">See all posts</button>
+        <% else %>
+          <button type="button" class="see-all-posts-btn">See all posts</button>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+
+</div>

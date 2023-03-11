@@ -1,7 +1,17 @@
-<h1>Users List</h1>
-<% @users.each do |user|%>
-  <div class="user">
-    <%= user.name %>
-    <%= user.id %>
-  </div>
-<% end %>
+<div class="container">
+  <h1 class="title">Users List</h1>
+  <h2 class="user-count">User Count: <%= @users.length %></h2>
+  <ul class="users-list">
+    <% @users.each do |user|%>
+      <li class="user-details">
+        <div class="user-image-container">
+          <%= image_tag user.photo, {alt: 'avatar', class: 'user-image'} %>
+        </div>
+        <div class="name-and-post">
+          <h2 class='name'><%= link_to user.name, user %></h2>
+          <p class='posts'>Number of posts: <%= user.posts_counter %> </p>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+</div>
