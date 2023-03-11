@@ -1,0 +1,30 @@
+.single-post {
+  padding: 2rem;
+}
+
+.single-post-text {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.single-post-text h1 {
+  margin-bottom: 1rem;
+}
+
+.single-post-comments {
+  border-radius: 5px;
+  border: 1px solid black;
+  padding: 1rem;
+}
+
+.comments-list {
+  list-style: none;
+}
+
+.comment-item {
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+}
