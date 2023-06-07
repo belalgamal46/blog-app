@@ -48,8 +48,6 @@
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
-
 - **List of Posts:** The app will display a list of posts for readers to view.
 - **Commenting System:** Readers can add comments to the posts, which will allow for discussion and feedback.
 - **Like System:** The app will allow readers to like posts, which can help the author understand which posts are the most popular.
@@ -92,15 +90,15 @@ Clone this repository to your desired folder:
 
 Install this project with:
 
-    ```
-    gem install
-    ```
+```
+  gem install
+```
 
 **OR**
 
-    ```
-      bundle install
-    ```
+```
+  bundle install
+```
 
 ### Usage
 
@@ -161,6 +159,6 @@ I would like to thank Microverse for all the help they provide.
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./LICENSE) licensed.
+This project is [MIT](./LICENSE.md) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
