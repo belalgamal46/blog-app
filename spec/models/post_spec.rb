@@ -14,7 +14,7 @@ RSpec.describe Post, type: :model do
       user = User.create(name: 'Tom', posts_counter: 0, photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
                          bio: 'Teacher from Mexico.')
       user2 = User.create(name: 'Belal', posts_counter: 0, photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
-                         bio: 'Teacher from Mexico.')
+                          bio: 'Teacher from Mexico.')
       post = Post.create(title: 'Test Post', text: 'Lorem ipsum', comments_counter: 0, likes_counter: 0, author: user)
       comment1 = Comment.create(posts: post, text: 'Comment 1', author: user)
       comment2 = Comment.create(posts: post, text: 'Comment 2', author: user2)
@@ -26,7 +26,7 @@ RSpec.describe Post, type: :model do
       user = User.create(name: 'Tom', posts_counter: 0, photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
                          bio: 'Teacher from Mexico.')
       user2 = User.create(name: 'Belal', posts_counter: 0, photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
-                           bio: 'Teacher from Mexico.')
+                          bio: 'Teacher from Mexico.')
       post = Post.create(title: 'Test Post', text: 'Lorem ipsum', comments_counter: 0, likes_counter: 0, author: user)
       like1 = Like.create(posts: post, author: user)
       like2 = Like.create(posts: post, author: user2)
@@ -99,9 +99,9 @@ RSpec.describe Post, type: :model do
     Post.create(title: 'Test Post', text: 'Lorem ipsum', comments_counter: 0, likes_counter: 0, author: user)
 
     it 'updates the posts_counter on the author after saving' do
-      expect {
+      expect do
         Post.create(title: 'Test Post 2', text: 'Lorem ipskkkum', comments_counter: 0, likes_counter: 0, author: user)
-      }.to change { user.reload.posts_counter }.from(1).to(2)
+      end.to change { user.reload.posts_counter }.from(1).to(2)
     end
   end
 end
