@@ -1,0 +1,9 @@
+<div class="image_container">
+    <%= image_tag obj.photo, alt: obj.name, class: "image" %>
+</div>
+<div class="user-text">
+  <h2>
+    <%= obj.name %>
+  </h2>
+  <p><%= pluralize obj.posts_counter, "post" %></p>
+</div>
