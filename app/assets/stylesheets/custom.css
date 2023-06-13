@@ -1,0 +1,152 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+:root{
+	--hover-color:  #d6d6d6;
+	--post-hover:  rgb(250,250,250);
+}
+
+ul{
+	list-style: none;
+}
+
+.users_container{
+	list-style: none;
+	padding-top: 50px;
+	padding-left: 50px;
+	padding-right: 50px;
+	display: flex;
+	flex-direction: column;
+	row-gap: 20px;
+}
+
+.user{
+	width: 25%;
+	display: flex;
+	gap: 25px;
+	padding: 3px;
+	border: 3px solid black;
+	text-decoration: none;
+}
+
+.user:hover{
+	background-color: var(--hover-color);
+	cursor: pointer;
+}
+
+.image{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.image_container{
+	width: 100px;
+	height: 100px;
+}
+
+.user-text h2, .user-text p{
+	color: black;
+}
+
+.show-page {
+	min-height: 100vh;
+	min-width: 320px;
+	max-width: 50%;
+	margin: 50px auto auto;
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+}
+
+.show-user {
+	width: 100%;
+	display: flex;
+	gap: 25px;
+	padding: 3px;
+	border: 3px solid black;
+	text-decoration: none;
+}
+
+.user-text {
+	flex: 1 0 auto;
+	display: flex;
+}
+
+.user-text h2 {
+	align-self: center;
+	flex: 1;
+}
+
+.user-text p{
+	align-self: end;
+	padding-right: 20px;
+	padding-bottom: 20px;
+}
+
+.bio{
+	padding: 10px;
+	border: 3px solid black;
+}
+
+.bio p {
+	margin-top: 20px;
+}
+
+
+.post-item {
+	padding: 10px;
+	color: black;
+	text-decoration: none;
+	display: block;
+	border: 3px solid black;
+	transition: all 0.3s ease-in-out;
+}
+
+.post-item:hover {
+	background-color: var(--post-hover);
+	box-shadow: 0 0 5px 2px rgba(69,69,69,0.5);
+}
+
+.post-item p {
+	margin-top: 20px;
+}
+
+.see-all-posts-btn-container{
+	width: 100%;
+	text-align: center;
+}
+
+.see-all-posts-btn-container a{
+	color: white;
+	text-decoration: none;
+	background-color: black;
+	border: 1px solid black;
+	padding: 5px 10px;
+	box-shadow: 0 0 white;
+	transition: all 0.3s ease-in-out;
+	font-weight: 500;
+}
+
+.see-all-posts-btn-container a:hover{
+	box-shadow: 3px 3px black;
+	background-color: white;
+	color: black;
+}
+
+.posts-list-title{
+	margin-bottom: 20px;
+}
+
+.posts-list {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.post-counters{
+	text-align: right;
+}
