@@ -66,4 +66,9 @@ RSpec.configure do |config|
       integration_config.library :rails
     end
   end
+
+  config.before(:suite) do
+    DatabaseCleaner.strategy = :transaction
+    DatabaseCleaner.clean_with(:truncation)
+  end
 end
