@@ -1,9 +1,13 @@
 require 'rails_helper'
 
 RSpec.describe Comment, type: :model do
-  user = User.create(name: 'Tom', posts_counter: 0, photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
-                     bio: 'Teacher from Mexico.')
-  post = Post.create(title: 'Test Post', text: 'Lorem ipsum', comments_counter: 0, likes_counter: 0, author: user)
+  let(:user) do
+    User.create(name: 'Jane Smith', posts_counter: 0, photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
+                bio: 'Teacher from Mexico.')
+  end
+  let!(:post) do
+    Post.create(title: 'Test Post', text: 'Lorem ipsum', comments_counter: 0, likes_counter: 0, author: user)
+  end
 
   describe 'associations' do
     it 'belongs to an author' do

@@ -70,19 +70,31 @@ RSpec.describe Post, type: :model do
   end
 
   describe '#five_recent_comments' do
-    user = User.create(name: 'Tom', posts_counter: 0, photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
-                       bio: 'Teacher from Mexico.')
-    user2 = User.create(name: 'Belal', posts_counter: 0, photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
-                        bio: 'Teacher from Mexico.')
-    user3 = User.create(name: 'Abdallah', posts_counter: 0, photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
-                        bio: 'Teacher from Mexico.')
-    post = Post.create(title: 'Test Post', text: 'Lorem ipsum', comments_counter: 0, likes_counter: 0, author: user)
-    comment1 = Comment.create(posts: post, text: 'Comment 1', created_at: 1.day.ago, author: user2)
-    comment2 = Comment.create(posts: post, text: 'Comment 2', created_at: 2.days.ago, author: user3)
-    comment3 = Comment.create(posts: post, text: 'Comment 3', created_at: 3.days.ago, author: user2)
-    comment4 = Comment.create(posts: post, text: 'Comment 4', created_at: 4.days.ago, author: user3)
-    comment5 = Comment.create(posts: post, text: 'Comment 5', created_at: 5.days.ago, author: user2)
-    comment6 = Comment.create(posts: post, text: 'Comment 6', created_at: 6.days.ago, author: user3)
+    let(:user) do
+      User.create(name: 'Tom', posts_counter: 0, photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
+                  bio: 'Teacher from Mexico.')
+    end
+
+    let(:user2) do
+      User.create(name: 'Belal', posts_counter: 0, photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
+                  bio: 'Teacher from Mexico.')
+    end
+
+    let(:user3) do
+      User.create(name: 'Abdallah', posts_counter: 0, photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
+                  bio: 'Teacher from Mexico.')
+    end
+
+    let!(:post) do
+      Post.create(title: 'Test Post', text: 'Lorem ipsum', comments_counter: 0, likes_counter: 0, author: user)
+    end
+
+    let!(:comment1) { Comment.create(posts: post, text: 'Comment 1', created_at: 1.day.ago, author: user2) }
+    let!(:comment2) { Comment.create(posts: post, text: 'Comment 2', created_at: 2.days.ago, author: user3) }
+    let!(:comment3) { Comment.create(posts: post, text: 'Comment 3', created_at: 3.days.ago, author: user2) }
+    let!(:comment4) { Comment.create(posts: post, text: 'Comment 4', created_at: 4.days.ago, author: user3) }
+    let!(:comment5) { Comment.create(posts: post, text: 'Comment 5', created_at: 5.days.ago, author: user2) }
+    let!(:comment6) { Comment.create(posts: post, text: 'Comment 6', created_at: 6.days.ago, author: user3) }
 
     it 'returns the five most recent comments' do
       expect(post.five_recent_comments).to eq([comment1, comment2, comment3, comment4, comment5])
@@ -94,13 +106,17 @@ RSpec.describe Post, type: :model do
   end
 
   describe 'callbacks' do
-    user = User.create(name: 'Tom', posts_counter: 0, photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
-                       bio: 'Teacher from Mexico.')
-    Post.create(title: 'Test Post', text: 'Lorem ipsum', comments_counter: 0, likes_counter: 0, author: user)
+    let(:user) do
+      User.create(name: 'Tom', posts_counter: 0, photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
+                  bio: 'Teacher from Mexico.')
+    end
+    let!(:post) do
+      Post.create(title: 'Test Post', text: 'Lorem ipsum', comments_counter: 0, likes_counter: 0, author: user)
+    end
 
     it 'updates the posts_counter on the author after saving' do
       expect do
-        Post.create(title: 'Test Post 2', text: 'Lorem ipskkkum', comments_counter: 0, likes_counter: 0, author: user)
+        Post.create(title: 'Test Post 2', text: 'Lorem', comments_counter: 0, likes_counter: 0, author: user)
       end.to change { user.reload.posts_counter }.from(1).to(2)
     end
   end
