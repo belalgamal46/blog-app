@@ -12,9 +12,9 @@ html {
 :root {
   --vista-blue-hover: #92a5d8;
   --post-hover: rgb(250, 250, 250);
-  --gunmetal: #2D3142;
-  --vista-blue: #7F95D1;
-  --atomic-tangerine: #E6A289;
+  --gunmetal: #2d3142;
+  --vista-blue: #7f95d1;
+  --atomic-tangerine: #e6a289;
   --border-radius: 0.7rem;
   --btn-border-radius: 0.5rem;
 }
@@ -24,12 +24,11 @@ ul {
 }
 
 /* ------------------------ Home Page ------------------------ */
-#home-page{
+#home-page {
   padding-left: 50px;
   padding-top: 50px;
   min-width: 400px;
   width: 30%;
-
 }
 
 #home-page h1 {
@@ -50,7 +49,7 @@ ul {
   gap: 25px;
   padding: 10px;
   text-decoration: none;
-  background-color: #7F95D1;
+  background-color: #7f95d1;
   border-radius: var(--border-radius);
   transition: background-color 0.2s ease-in-out;
 }
@@ -77,12 +76,17 @@ ul {
   color: white;
 }
 
-.user-text h2{
+.user-text h2 {
   font-size: 2.5rem;
+  align-self: center;
+  flex: 1;
 }
 
-.user-text p{
+.user-text p {
   font-size: 1.4rem;
+  align-self: end;
+  padding-right: 20px;
+  padding-bottom: 20px;
 }
 
 /* ------------------------ User Show Page ------------------------ */
@@ -102,7 +106,7 @@ ul {
   gap: 25px;
   padding: 10px;
   text-decoration: none;
-  background-color: #7F95D1;
+  background-color: #7f95d1;
   border-radius: var(--border-radius);
 }
 
@@ -111,25 +115,14 @@ ul {
   display: flex;
 }
 
-.user-text h2 {
-  align-self: center;
-  flex: 1;
-}
-
-.user-text p {
-  align-self: end;
-  padding-right: 20px;
-  padding-bottom: 20px;
-}
-
 .bio {
   padding: 10px;
-  background-color: #E6A289;
+  background-color: #e6a289;
   color: white;
   border-radius: var(--border-radius);
 }
 
-.bio h2{
+.bio h2 {
   font-size: 2.4rem;
 }
 
@@ -153,7 +146,7 @@ ul {
 .post-item {
   padding: 20px;
   text-decoration: none;
-  background-color: #7F95D1;
+  background-color: #7f95d1;
   color: white;
   transition: all 0.3s ease-in-out;
   display: flex;
@@ -203,12 +196,10 @@ ul {
   color: var(--gunmetal);
 }
 
-
-
 /* Media Query */
 @media only screen and (max-width: 600px) {
   /* Mobile Home Page */
-  #home-page{
+  #home-page {
     margin: auto;
     padding: 50px 2rem 0;
   }
