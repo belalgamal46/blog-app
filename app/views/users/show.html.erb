@@ -11,7 +11,7 @@
   </div>
 
   <div>
-    <h2 class="posts-list-title">Latest Posts</h2>
+    <h2 class="posts-list-title">Latest Posts (<%= @user.posts_counter %>)</h2>
     <ul class="posts-list">
       <% @user.latest_three_posts.each do |post| %>
         <li>

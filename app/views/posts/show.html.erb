@@ -14,7 +14,7 @@
       </div>
     </div>
 
-    <div>
+    <div class="show-post-text">
       <p>
         <%= @post.text %>
       </p>
@@ -29,9 +29,9 @@
             <h3>
               <%= comment.author.name %>:
             </h3>
-            <span>
-          <%= comment.text %>
-        </span>
+            <p>
+              <%= comment.text %>
+            </p>
           </li>
         <% end %>
       </ul>
