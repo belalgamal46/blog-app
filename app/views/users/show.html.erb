@@ -1,0 +1,38 @@
+<div class="show-page">
+  <div class="show-user">
+    <%= render 'shared/user', obj: @user %>
+  </div>
+
+  <div class="bio">
+    <h2>Bio</h2>
+    <p>
+      <%= @user.bio %>
+    </p>
+  </div>
+
+  <div>
+    <h2 class="posts-list-title">Latest Posts (<%= @user.posts_counter %>)</h2>
+    <ul class="posts-list">
+      <% @user.latest_three_posts.each do |post| %>
+        <li>
+          <%= link_to user_post_path(@user, post), class: "post-item" do %>
+            <h2>
+              <%= post.title %>
+            </h2>
+            <p>
+              <%= post.text %>
+            </p>
+            <div class="post-counters">
+              <span>Comments: <%= post.comments_counter %></span>
+              <span>Likes: <%= post.likes_counter %></span>
+            </div>
+          <% end %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+
+  <div class="see-all-posts-btn-container">
+    <%= link_to "See all posts",user_posts_path(@user) %>
+  </div>
+</div>
