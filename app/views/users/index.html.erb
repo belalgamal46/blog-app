@@ -1,9 +1,0 @@
-<ul class="users_container">
-  <% @users.each do |user| %>
-      <li>
-        <%= link_to user, class: "user" do %>
-           <%= render 'shared/user', obj: user %>
-        <% end %>
-      </li>
-  <% end %>
-</ul>
