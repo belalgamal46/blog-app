@@ -1,0 +1,5 @@
+<%= form_with(model: model, url: user_post_likes_path(obj.author, obj), scope: :like, method: :post, class: "like-form") do |f| %>
+  <button type="submit" class="like-btn">
+    <%= image_tag "thumb_up.svg", class: "image" %>
+  </button>
+<% end %>

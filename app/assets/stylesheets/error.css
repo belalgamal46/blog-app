@@ -1,0 +1,27 @@
+.alert {
+  background-color: var(--atomic-tangerine);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: var(--border-radius);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.error-title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.error-message {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.error-message::before {
+  width: 100px;
+  height: 100px;
+  background-color: black;
+}

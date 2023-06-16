@@ -1,0 +1,12 @@
+<section id="new-post-container">
+  <h1>Create a post</h1>
+
+  <div>
+    <%= render 'shared/error', obj: @post %>
+    <%= form_with(model: @post, url: user_posts_path, method: :post, scope: :post, class: "form") do |f| %>
+      <%= f.text_field :title, placeholder: "Enter post title", class: "form-field" %>
+      <%= f.text_area :text, placeholder: "Enter post description", size: "50x7", class: "form-field" %>
+      <%= f.submit 'Create post', class: "new-post-btn" %>
+    <% end %>
+  </div>
+</section>

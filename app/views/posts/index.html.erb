@@ -1,6 +1,7 @@
 <section id="posts-index-page">
   <div class="post-user">
     <%= render 'shared/user', obj: @user %>
+    <%= render 'create_post_btn', obj: @user %>
   </div>
 
   <ul class="posts-list">
@@ -20,13 +21,18 @@
             </div>
           </div>
         <% end %>
+        <div class="show-post-create-comment">
+          <%= render 'comments/create_comment_btn', obj: post %>
+          <%= render 'likes/likes_form', obj: post, model: @like %>
+        </div>
+
         <% if post.comments_counter != 0 %>
           <div class="comments-container">
             <ul class="comments-list">
               <% post.five_recent_comments.each do |comment| %>
                 <li>
                   <div class="comment-image-container">
-                    <img src=<%= comment.author.photo %> alt=<%= comment.author.name %> class="comment-image">
+                    <%= image_tag comment.author.photo, alt:comment.author.name, class:"comment-image"  %>
                   </div>
                   <div class="comment-text-details">
                     <h3>
@@ -38,11 +44,15 @@
                   </div>
                 </li>
               <% end %>
+              <li>
+                <%= render 'create_comments_form', obj: post %>
+              </li>
             </ul>
           </div>
         <% else %>
           <div class="comments-container">
             <span>No comments</span>
+            <%= render 'create_comments_form', obj: post %>
           </div>
         <% end %>
       </li>
@@ -51,5 +61,4 @@
       <%= will_paginate @posts, :container => false %>
     </li>
   </ul>
-
 </section>
