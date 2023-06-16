@@ -41,7 +41,6 @@
 
 .like-form {
   width: 33px;
-
 }
 
 .like-btn {
@@ -57,7 +56,7 @@
   transition: all 0.2s ease-in-out;
 }
 
-.like-btn:hover{
+.like-btn:hover {
   background-color: white;
   box-shadow: 3px 3px var(--atomic-tangerine);
 }
@@ -227,7 +226,6 @@
 .create-post-btn:hover {
   box-shadow: 4px 4px var(--atomic-tangerine);
   background-color: white;
-
 }
 
 /* ------------------------ Pagination styles ------------------------ */
@@ -259,7 +257,7 @@
   border: 1px solid var(--vista-blue);
 }
 
-.form-field:focus{
+.form-field:focus {
   outline: none;
   border-color: var(--atomic-tangerine);
 }

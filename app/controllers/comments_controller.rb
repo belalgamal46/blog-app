@@ -12,7 +12,7 @@ class CommentsController < ApplicationController
 
     if @comment.save
       flash[:notice] = 'Comment created successfully'
-      puts "success"
+      puts 'success'
       redirect_to user_post_path(params[:user_id], params[:post_id])
     else
       render :new, status: :unprocessable_entity
