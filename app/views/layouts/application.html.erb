@@ -12,11 +12,13 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "custom", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "posts", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "error", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
     <main>
+      <%= render 'layouts/messages' %>
       <%= yield %>
     </main>
   </body>

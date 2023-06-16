@@ -13,3 +13,28 @@
  *= require_tree .
  *= require_self
  */
+
+.flash-container {
+	max-width: 50%;
+	min-width: 3.2rem;
+	margin: auto;
+}
+
+.flash-message {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 1rem;
+	background-color: lightgreen;
+	padding: 2rem;
+	border-radius: var(--border-radius);
+}
+
+.btn-close {
+	font-size: 2rem;
+	font-weight: 800;
+	color: white;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+}
