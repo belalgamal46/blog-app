@@ -33,6 +33,13 @@
   </div>
 
   <div class="see-all-posts-btn-container">
-    <%= link_to "See all posts",user_posts_path(@user) %>
+    <%= link_to user_posts_path(@user) do %>
+      <% if @user.posts_counter === 0 %>
+        <button type="button" class="disabled" disabled>See all posts</button>
+      <% else %>
+        <button type="button">See all posts</button>
+      <% end %>
+
+    <% end %>
   </div>
 </div>

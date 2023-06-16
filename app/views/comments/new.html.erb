@@ -1,0 +1,10 @@
+<section id="new-comment">
+  <h1>Create a comment</h1>
+  <div>
+    <%= form_with(model: @comment, url: user_post_comments_path(@comment.author, @comment.posts), method: :post, scope: :comment, class: "form-comment") do |f| %>
+      <%= render 'shared/error', obj: @comment %>
+      <%= f.text_field :text, placeholder: "Enter your comment", class: "form-field"  %>
+      <%= f.submit "Create comment", class: "new-comment-btn"  %>
+    <% end %>
+  </div>
+</section>

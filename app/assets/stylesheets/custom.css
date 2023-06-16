@@ -177,7 +177,7 @@ ul {
   text-align: center;
 }
 
-.see-all-posts-btn-container a {
+.see-all-posts-btn-container a button {
   color: white;
   text-decoration: none;
   background-color: var(--gunmetal);
@@ -188,12 +188,23 @@ ul {
   font-weight: 500;
   font-size: 1.6rem;
   border-radius: var(--btn-border-radius);
+  cursor: pointer;
 }
 
-.see-all-posts-btn-container a:hover {
+.see-all-posts-btn-container a button:hover {
   box-shadow: 3px 3px var(--gunmetal);
   background-color: white;
   color: var(--gunmetal);
+}
+
+.see-all-posts-btn-container a button.disabled:hover {
+  box-shadow: none;
+  background-color: var(--gunmetal);
+  color: white;
+}
+
+.disabled {
+  opacity: 0.3;
 }
 
 /* Media Query */

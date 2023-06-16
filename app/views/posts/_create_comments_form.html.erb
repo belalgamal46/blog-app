@@ -1,0 +1,4 @@
+<%= form_with(model: obj.comments, url: user_post_comments_path(obj.author, obj), method: :post, scope: :comment, class: "comment-form") do |f| %>
+  <%= f.text_field :text, placeholder: "Enter you comment", class: "form-field comment-input" %>
+  <%= f.submit "Comment", class: 'submit-comment-btn' %>
+<% end %>

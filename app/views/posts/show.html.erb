@@ -19,6 +19,11 @@
         <%= @post.text %>
       </p>
     </div>
+
+    <div class="create-comment-btn-container">
+      <%= render "comments/create_comment_btn", obj: @post %>
+      <%= render "likes/likes_form", obj: @post, model: @like %>
+    </div>
   </div>
 
   <div class="show-post-comments">
@@ -26,6 +31,9 @@
       <ul>
         <% @post.comments.each do |comment| %>
           <li>
+            <div class="comment-image-container">
+              <%= image_tag comment.author.photo, alt:comment.author.name, class:"comment-image"  %>
+            </div>
             <h3>
               <%= comment.author.name %>:
             </h3>
@@ -34,9 +42,13 @@
             </p>
           </li>
         <% end %>
+        <li class="create-btn-container">
+          <%= render 'create_comments_form', obj: @post %>
+        </li>
       </ul>
     <% else %>
       <p>No Comments</p>
+      <%= render 'create_comments_form', obj: @post %>
     <% end %>
   </div>
 </section>
