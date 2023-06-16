@@ -69,8 +69,6 @@
 	transition: all 0.2s ease-in-out;
 }
 
-
-
 .create-comment-btn:hover {
 	box-shadow: 3px 3px var(--atomic-tangerine);
 	color: var(--gunmetal);

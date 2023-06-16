@@ -14,6 +14,7 @@
 }
 
 .post-user {
+  position: relative;
   display: flex;
   gap: 25px;
   padding: 10px;
@@ -36,7 +37,6 @@
   align-items: flex-start;
   justify-content: flex-end;
   gap: 1.5rem;
-  width: 100%;
 }
 
 .like-form {
@@ -127,6 +127,12 @@
   border-radius: 100%;
 }
 
+.comment-text-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
 .comment-text-details p {
   word-break: break-all;
 }
@@ -178,7 +184,7 @@
   background-color: var(--atomic-tangerine);
   color: white;
   border-radius: var(--border-radius);
-  gap: 2rem
+  gap: 2rem;
 }
 
 .show-post-comments ul {
@@ -190,7 +196,7 @@
 .show-post-comments ul li {
   display: flex;
   align-items: flex-start;
-  gap: 5px;
+  gap: 1.5rem;
 }
 
 .show-post-comments ul li p {
@@ -198,7 +204,31 @@
 }
 
 /* New Post */
+.create-post-btn-container {
+  position: absolute;
+  padding: 2rem 1rem;
+  top: 0;
+  right: 0;
+}
 
+.create-post-btn {
+  padding: 0.8rem 2rem;
+  background-color: var(--atomic-tangerine);
+  border-radius: var(--btn-border-radius);
+  border: 1px solid var(--atomic-tangerine);
+  box-shadow: 0 0 transparent;
+  text-decoration: none;
+  color: var(--gunmetal);
+  font-weight: 500;
+  font-size: 1.5rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.create-post-btn:hover {
+  box-shadow: 4px 4px var(--atomic-tangerine);
+  background-color: white;
+
+}
 
 /* ------------------------ Pagination styles ------------------------ */
 #new-post-container {

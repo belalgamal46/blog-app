@@ -44,7 +44,12 @@ ul {
   row-gap: 20px;
 }
 
+.users_container li {
+  position: relative;
+}
+
 .user {
+  position: relative;
   display: flex;
   gap: 25px;
   padding: 10px;
@@ -85,8 +90,8 @@ ul {
 .user-text p {
   font-size: 1.4rem;
   align-self: end;
-  padding-right: 20px;
-  padding-bottom: 20px;
+  padding-right: 0.2rem;
+  padding-bottom: 0.2rem;
 }
 
 /* ------------------------ User Show Page ------------------------ */
@@ -101,6 +106,7 @@ ul {
 }
 
 .show-user {
+  position: relative;
   width: 100%;
   display: flex;
   gap: 25px;

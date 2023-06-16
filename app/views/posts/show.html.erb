@@ -34,12 +34,14 @@
             <div class="comment-image-container">
               <%= image_tag comment.author.photo, alt:comment.author.name, class:"comment-image"  %>
             </div>
-            <h3>
-              <%= comment.author.name %>:
-            </h3>
-            <p>
-              <%= comment.text %>
-            </p>
+            <div class="comment-text-details">
+              <h3>
+                <%= comment.author.name %>
+              </h3>
+              <p>
+                <%= comment.text %>
+              </p>
+            </div>
           </li>
         <% end %>
         <li class="create-btn-container">
