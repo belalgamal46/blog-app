@@ -2,13 +2,11 @@ require 'rails_helper'
 
 RSpec.feature 'Post show page', type: :feature do
   let!(:user) do
-    User.create(name: 'John Doe', bio: 'a user bio', photo: 'https://images.unsplash.com/photo-1508921912186-1d1a45ebb3c1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80'
-    )
+    User.create(name: 'John Doe', bio: 'a user bio', photo: 'https://images.unsplash.com/photo-1508921912186-1d1a45ebb3c1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80')
   end
 
   let!(:post) do
-    Post.create(title: 'Test Post', text: 'Lorem ipsum dolor sit amet', author: user
-    )
+    Post.create(title: 'Test Post', text: 'Lorem ipsum dolor sit amet', author: user)
   end
 
   let!(:comment1) { Comment.create!(text: 'Comment1', posts: post, author: user) }

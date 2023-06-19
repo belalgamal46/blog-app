@@ -2,43 +2,35 @@ require 'rails_helper'
 
 RSpec.feature 'Post index page', type: :feature do
   let!(:user) do
-    User.create!(name: 'User', bio: 'user Bio', photo: 'https://images.unsplash.com/photo-1508921912186-1d1a45ebb3c1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80'
-    )
+    User.create!(name: 'User', bio: 'user Bio', photo: 'https://images.unsplash.com/photo-1508921912186-1d1a45ebb3c1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80')
   end
 
   let!(:post1) do
-    Post.create!(title: 'Test Post 1', text: 'Test post text 1', author: user
-    )
+    Post.create!(title: 'Test Post 1', text: 'Test post text 1', author: user)
   end
 
   let!(:post2) do
-    Post.create!(title: 'Test Post 1', text: 'Test post text 1', author: user
-    )
+    Post.create!(title: 'Test Post 1', text: 'Test post text 1', author: user)
   end
 
   let!(:post3) do
-    Post.create!(title: 'Test Post 1', text: 'Test post text 1', author: user
-    )
+    Post.create!(title: 'Test Post 1', text: 'Test post text 1', author: user)
   end
 
   let!(:comment1) do
-    Comment.create!(text: 'Comment1', posts: post1, author: user
-    )
+    Comment.create!(text: 'Comment1', posts: post1, author: user)
   end
 
   let!(:comment2) do
-    Comment.create!(text: 'Comment2', posts: post1, author: user
-    )
+    Comment.create!(text: 'Comment2', posts: post1, author: user)
   end
 
   let!(:comment3) do
-    Comment.create!(text: 'Comment3', posts: post1, author: user
-    )
+    Comment.create!(text: 'Comment3', posts: post1, author: user)
   end
 
   let!(:comment4) do
-    Comment.create!(text: 'Comment4', posts: post1, author: user
-    )
+    Comment.create!(text: 'Comment4', posts: post1, author: user)
   end
 
   before do
@@ -128,6 +120,5 @@ RSpec.feature 'Post index page', type: :feature do
       click_link 'Next', href: "/users/#{user.id}/posts?page=2"
       expect(page).to have_current_path("/users/#{user.id}/posts?page=2")
     end
-
   end
 end
