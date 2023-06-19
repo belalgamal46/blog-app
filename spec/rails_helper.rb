@@ -71,6 +71,6 @@ RSpec.configure do |config|
     DatabaseCleaner.strategy = :transaction
     DatabaseCleaner.clean_with(:truncation)
   end
-
+  # To open browser when testing the views
   Capybara.default_driver = :selenium_chrome
 end
