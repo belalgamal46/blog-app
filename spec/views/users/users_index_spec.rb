@@ -1,4 +1,4 @@
-#forzenrequire 'rails_helper'
+require 'rails_helper'
 
 RSpec.describe 'Root Page', type: :feature do
   let!(:user) do
