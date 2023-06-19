@@ -29,14 +29,14 @@
   <div class="show-post-comments">
     <% if @post.comments_counter != 0 %>
       <ul>
-        <% @post.comments.each do |comment| %>
+        <% @post.comments.each do | comment | %>
           <li>
             <div class="comment-image-container">
-              <%= image_tag comment.author.photo, alt:comment.author.name, class:"comment-image"  %>
+              <%= image_tag @user.photo, alt: @user.name, class: "comment-image" %>
             </div>
             <div class="comment-text-details">
               <h3>
-                <%= comment.author.name %>
+                <%= @user.name %>
               </h3>
               <p>
                 <%= comment.text %>
