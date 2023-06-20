@@ -32,11 +32,11 @@
               <% post.five_recent_comments.each do | comment | %>
                 <li>
                   <div class="comment-image-container">
-                    <%= image_tag @user.photo, alt: @user.name, class: "comment-image" %>
+                    <%= image_tag comment.author.photo, alt: comment.author.name, class: "comment-image" %>
                   </div>
                   <div class="comment-text-details">
                     <h3>
-                      <%= @user.name %>
+                      <%= comment.author.name %>
                     </h3>
                     <p>
                       <%= comment.text %>
