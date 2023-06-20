@@ -20,9 +20,12 @@
       </p>
     </div>
 
-    <div class="create-comment-btn-container">
-      <%= render "comments/create_comment_btn", obj: @post %>
-      <%= render "likes/likes_form", obj: @post, model: @like %>
+    <div class="create-comment-btn-container with-author">
+      <h3>by: <%= @post.author.name %></h3>
+      <div class="create-like-comment-container">
+        <%= render "comments/create_comment_btn", obj: @post %>
+        <%= render "likes/likes_form", obj: @post, model: @like %>
+      </div>
     </div>
   </div>
 
@@ -32,11 +35,11 @@
         <% @post.comments.each do | comment | %>
           <li>
             <div class="comment-image-container">
-              <%= image_tag @user.photo, alt: @user.name, class: "comment-image" %>
+              <%= image_tag comment.author.photo, alt: comment.author.name, class: "comment-image" %>
             </div>
             <div class="comment-text-details">
               <h3>
-                <%= @user.name %>
+                <%= comment.author.name %>
               </h3>
               <p>
                 <%= comment.text %>
