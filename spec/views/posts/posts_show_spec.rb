@@ -24,6 +24,7 @@ RSpec.feature 'Post show page', type: :feature do
     expect(page).to have_selector('.show-post-counters span', text: "Comments: #{post.comments_counter}")
     expect(page).to have_selector('.show-post-counters span', text: "Likes: #{post.likes_counter}")
     expect(page).to have_selector('.like-btn')
+    expect(page).to have_content("by: #{user.name}")
 
     within('.show-post-comments') do
       expect(page).to have_content(comment1.author.name)
