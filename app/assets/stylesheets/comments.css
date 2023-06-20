@@ -56,6 +56,21 @@
   gap: 1.5rem;
 }
 
+.with-author {
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-left: 0;
+}
+
+.with-author h3 {
+  font-size: 1.6rem;
+}
+
+.create-like-comment-container {
+  display: flex;
+  gap: 1.5rem;
+}
+
 .create-comment-btn {
   padding: 0.8rem 1.5rem;
   background-color: var(--atomic-tangerine);

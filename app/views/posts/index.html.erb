@@ -5,7 +5,7 @@
   </div>
 
   <ul class="posts-list">
-    <% @posts.each do |post| %>
+    <% @posts.each do | post | %>
       <li>
         <%= link_to user_post_path(post.author, post), class: "post-link" do %>
           <div class="post-details">
@@ -29,10 +29,10 @@
         <% if post.comments_counter != 0 %>
           <div class="comments-container">
             <ul class="comments-list">
-              <% post.five_recent_comments.each do |comment| %>
+              <% post.five_recent_comments.each do | comment | %>
                 <li>
                   <div class="comment-image-container">
-                    <%= image_tag comment.author.photo, alt:comment.author.name, class:"comment-image"  %>
+                    <%= image_tag comment.author.photo, alt: comment.author.name, class: "comment-image" %>
                   </div>
                   <div class="comment-text-details">
                     <h3>
