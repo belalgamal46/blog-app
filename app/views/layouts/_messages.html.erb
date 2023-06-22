@@ -1,7 +1,15 @@
 <div class="flash-container">
   <% flash.each do | name, msg | %>
-    <div class="flash-message" role="alert">
-      <h2><%= msg %></h2>
-    </div>
+    <% if flash[:notice] %>
+      <div class="notice" role="alert">
+        <h2><%= msg %></h2>
+      </div>
+    <% end %>
+
+    <% if flash[:alert] %>
+      <div class="alert" role="alert">
+        <h2><%= msg %></h2>
+      </div>
+    <% end %>
   <% end %>
 </div>
