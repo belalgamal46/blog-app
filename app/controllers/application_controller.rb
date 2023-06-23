@@ -2,7 +2,6 @@ class ApplicationController < ActionController::Base
   before_action :authenticate_user!
   before_action :update_allowed_parameters, if: :devise_controller?
 
-
   def find_user
     @user = current_user
   end
@@ -19,6 +18,4 @@ class ApplicationController < ActionController::Base
       u.permit(:name, :photo, :bio, :email, :password, :current_password)
     end
   end
-
-
 end

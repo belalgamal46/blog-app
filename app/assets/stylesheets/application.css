@@ -20,7 +20,8 @@
   margin: auto;
 }
 
-.notice, .alert {
+.notice,
+.alert {
   display: flex;
   justify-content: space-between;
   align-items: center;

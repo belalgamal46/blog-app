@@ -1,97 +1,99 @@
 #sign-in {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	min-height: 90vh;
-	justify-content: center;
-	gap: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 90vh;
+  justify-content: center;
+  gap: 4rem;
 }
 
 #sign-in h2 {
-	font-size: 3.5rem;
-	color: var(--gunmetal);
+  font-size: 3.5rem;
+  color: var(--gunmetal);
 }
 
 .form-container {
-	display: flex;
-	flex-direction: column;
-	min-width: 250px;
-	gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  min-width: 250px;
+  gap: 2rem;
 }
 
 .new_user {
-	display: flex;
-	flex-direction: column;
-	gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .field {
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .field label {
-	font-size: 1.4rem;
-	font-weight: 500;
-	color: var(--gunmetal);
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--gunmetal);
 }
 
-.field input, .field textarea {
-	padding: 1rem;
-	border-radius: var(--border-radius);
-	border: 1px solid var(--gunmetal);
-	outline: none;
+.field input,
+.field textarea {
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--gunmetal);
+  outline: none;
 }
 
-.field input:focus, .field textarea:focus {
-	border-color: var(--atomic-tangerine);
+.field input:focus,
+.field textarea:focus {
+  border-color: var(--atomic-tangerine);
 }
 
 .checkbox {
-	flex-direction: row;
-	align-items: center;
-	gap: 0.5rem;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-.checkbox label{
-	font-size: 1.2rem;
-	color: var(--gunmetal);
+.checkbox label {
+  font-size: 1.2rem;
+  color: var(--gunmetal);
 }
 
 .actions input {
-	padding: 1rem 2rem;
-	background-color: var(--gunmetal);
-	border: 1px solid var(--gunmetal);
-	border-radius: var(--btn-border-radius);
-	color: white;
-	font-size: 1.6rem;
-	font-weight: 500;
-	cursor: pointer;
-	box-shadow: 0 0 transparent;
-	width: 100%;
-	transition: all 0.2s ease-in-out;
+  padding: 1rem 2rem;
+  background-color: var(--gunmetal);
+  border: 1px solid var(--gunmetal);
+  border-radius: var(--btn-border-radius);
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 0 transparent;
+  width: 100%;
+  transition: all 0.2s ease-in-out;
 }
 
 .actions input:hover {
-	box-shadow: 3px 3px var(--gunmetal);
-	background-color: white;
-	color: var(--gunmetal);
+  box-shadow: 3px 3px var(--gunmetal);
+  background-color: white;
+  color: var(--gunmetal);
 }
 
 .login-other-actions {
-	display: flex;
-	gap: 1rem;
-	flex-direction: column;
-	width: 100%;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  width: 100%;
 }
 
 .login-other-actions a {
-	text-decoration: underline;
-	color: var(--gunmetal);
-	font-size: 1.4rem;
+  text-decoration: underline;
+  color: var(--gunmetal);
+  font-size: 1.4rem;
 }
 
 .login-other-actions a:hover {
-	color: var(--atomic-tangerine);
-	text-decoration: underline;
+  color: var(--atomic-tangerine);
+  text-decoration: underline;
 }
