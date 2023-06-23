@@ -18,6 +18,18 @@ class CommentsController < ApplicationController
       render :new, status: :unprocessable_entity
     end
   end
+  
+  def destroy
+    @post = Post.find_by(id: params[:id])
+    # return render file: "#{Rails.root}/public/404.html", status: :not_found, layout: false if @comment.nil?
+
+    if @comment.destroy
+      flash[:notice] = 'Comment deleted successfully'
+    else
+      flash[:alert] = 'Comment was not deleted something went wrong'
+    end
+    redirect_to user_post_path(params[:user_id], params[:id])
+  end
 
   private
 

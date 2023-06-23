@@ -106,3 +106,29 @@
   color: var(--gunmetal);
   background-color: white;
 }
+
+.delete-comment-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 1;
+  align-self: center;
+}
+
+.delete-comment-container a {
+  padding: 0.7rem 1rem;
+  background-color: var(--gunmetal);
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: var(--btn-border-radius);
+  box-shadow: 0 0 transparent;
+  border: 1px solid var(--gunmetal);
+  transition: all 0.2s ease-in-out;
+}
+
+.delete-comment-container a:hover {
+  background-color: white;
+  color: var(--gunmetal);
+  box-shadow: 3px 3px var(--gunmetal);
+}
