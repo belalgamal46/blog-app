@@ -1,0 +1,5 @@
+<% if can? :manage, obj %>
+  <%= form_with(model: obj, url: user_post_path(obj.author), method: :delete, scope: :post, class: "delete-post-form") do | f | %>
+    <%= f.submit "Delete post" %>
+  <% end %>
+<% end %>
