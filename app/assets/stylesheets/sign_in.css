@@ -44,22 +44,6 @@
   outline: none;
 }
 
-.field input:focus,
-.field textarea:focus {
-  border-color: var(--atomic-tangerine);
-}
-
-.checkbox {
-  flex-direction: row;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.checkbox label {
-  font-size: 1.2rem;
-  color: var(--gunmetal);
-}
-
 .actions input {
   padding: 1rem 2rem;
   background-color: var(--gunmetal);
@@ -77,6 +61,22 @@
 .actions input:hover {
   box-shadow: 3px 3px var(--gunmetal);
   background-color: white;
+  color: var(--gunmetal);
+}
+
+.field input:focus,
+.field textarea:focus {
+  border-color: var(--atomic-tangerine);
+}
+
+.checkbox {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.checkbox label {
+  font-size: 1.2rem;
   color: var(--gunmetal);
 }
 
