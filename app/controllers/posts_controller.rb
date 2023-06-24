@@ -31,10 +31,10 @@ class PostsController < ApplicationController
 
     if @post.destroy
       redirect_to user_posts_path(current_user)
-      flash[:notice] = "Your post have been deleted successfully"
+      flash[:notice] = 'Your post have been deleted successfully'
     else
       redirect_to user_post_path(current_user, @post)
-      flash[:alert] = "The post is not deleted something went wrong"
+      flash[:alert] = 'The post is not deleted something went wrong'
     end
   end
 

@@ -6,12 +6,12 @@ class Comment < ApplicationRecord
   after_destroy :update_comments_counter
   validates :text, presence: true
 
-def update_comments_counter
-  if destroyed?
-    posts.decrement!(:comments_counter, 1)
-  else
-    posts.increment!(:comments_counter, 1)
+  def update_comments_counter
+    if destroyed?
+      posts.decrement!(:comments_counter, 1)
+    else
+      posts.increment!(:comments_counter, 1)
+    end
   end
-end
 end
 
