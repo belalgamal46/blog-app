@@ -230,7 +230,8 @@
 
 .delete-post-form {
   text-align: center;
-  /*background-color: red;*/
+
+  /* background-color: red; */
 }
 
 .delete-post-form input {
