@@ -176,7 +176,7 @@
 }
 
 .show-post-comments {
-  padding: 10px;
+  padding: 1.2rem;
   display: flex;
   flex-direction: column;
   font-size: 1.6rem;
@@ -226,6 +226,31 @@
 .create-post-btn:hover {
   box-shadow: 4px 4px var(--atomic-tangerine);
   background-color: white;
+}
+
+.delete-post-form {
+  text-align: center;
+
+  /* background-color: red; */
+}
+
+.delete-post-form input {
+  background-color: var(--gunmetal);
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 500;
+  border-radius: var(--btn-border-radius);
+  border: 1px solid var(--gunmetal);
+  padding: 1.2rem 2.5rem;
+  cursor: pointer;
+  box-shadow: 0 0 transparent;
+  transition: all 0.2s ease-in-out;
+}
+
+.delete-post-form input:hover {
+  box-shadow: 3px 3px var(--gunmetal);
+  background-color: white;
+  color: var(--gunmetal);
 }
 
 /* ------------------------ Pagination styles ------------------------ */

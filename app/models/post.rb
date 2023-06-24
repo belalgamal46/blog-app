@@ -1,7 +1,7 @@
 class Post < ApplicationRecord
   belongs_to :author, class_name: 'User'
-  has_many :comments, foreign_key: 'posts_id'
-  has_many :likes, foreign_key: 'posts_id'
+  has_many :comments, foreign_key: 'posts_id', dependent: :destroy
+  has_many :likes, foreign_key: 'posts_id', dependent: :destroy
 
   validates :title, presence: true, length: { minimum: 4, maximum: 250 }
   validates :text, presence: true, length: { minimum: 5, maximum: 1000 }
@@ -13,10 +13,15 @@ class Post < ApplicationRecord
   end
 
   after_save :update_posts_counter
+  after_destroy :update_posts_counter
 
   private
 
   def update_posts_counter
-    author.increment!(:posts_counter, 1)
+    if destroyed?
+      author.decrement!(:posts_counter, 1)
+    else
+      author.increment!(:posts_counter, 1)
+    end
   end
 end
