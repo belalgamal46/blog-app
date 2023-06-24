@@ -11,4 +11,10 @@ Rails.application.routes.draw do
     end
   end
 
+  namespace :api do
+    get "/users/:user_id/posts", to: "posts#index", as: "user_posts"
+    get "/users/:user_id/posts/:post_id/comments", to: "comments#index", as: "user_post_comments"
+    post "/users/:user_id/posts/:post_id/comments", to: "comments#create", as: "create_user_post_comments"
+  end
+
 end
